@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体調記録アプリ</title>
+</head>
+<body>
+    <main>
+        <h1>体調記録アプリ</h1>
+        <p>その日の体調や要因を記録する</p>
+        
+        <section>
+            <h2>今日の記録を入力</h2>
+
+            <form id="record-form">
+
+                <!-- 日付 -->
+                <div>
+                    <label for="date">日付</label>
+                    <input type="date" id="date" name="date">
+                </div>
+
+                <!-- 体調 -->
+                <div>
+                    <label for="score">体調点数</label>
+                    <select id="score" name="score">
+                        <option value="">選んでください</option>
+                        <option value="1">1 かなりしんどい</option>
+                        <option value="2">2 しんどい</option>
+                        <option value="3">3 普通</option>
+                        <option value="4">4 やや良い</option>
+                        <option value="5">5 とても良い</option>
+                    </select>
+                </div>
+
+                <!-- 飲酒 -->
+                <div>
+                    <p>飲酒の有無</p>
+
+                    <label>
+                        <input type="checkbox" id="drank-yesterday" name="drankYesterday">
+                        前日に飲酒した
+                    </label>
+                    
+                    <label>
+                        <input type="checkbox" id="drank-today" name="drankToday">
+                        当日に飲酒した
+                    </label>
+                </div>
+
+                <!-- 気分メモ -->
+                <div>
+                    <label for="memo">気分メモ</label>
+                    <textarea id="memo" name="memo" rows="4" placeholder="今日の気分や様子を書く"></textarea>
+                </div>
+
+                <!-- しんどい要因 -->
+                <div>
+                    <label for="bad-factor">しんどくなった要因</label>
+                    <textarea id="bad-factor" name="badFactor" rows="4" placeholder="何がしんどかったかを書く"></textarea>
+                </div>
+
+                <!-- 楽になった要因 -->
+                <div>
+                    <label for="good-factor">楽になった要因</label>
+                    <textarea id="good-factor" name="goodFactor" rows="4" placeholder="何が楽につながったかを書く"></textarea>
+                </div>
+
+                <!-- 保存ボタン -->
+                <button type="submit">保存する</button>
+            </form>
+        </section>
+
+        <!-- 記録一覧 -->
+        <section>
+            <h2>記録一覧</h2>
+            <div id="record-list">
+                <p>まだ記録はありません。</p>
+            </div>
+        </section>
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
