@@ -30,3 +30,6 @@ https://hikaru-taniguchi.github.io/health-tracker-app/
 - localStorageを使った保存機能
 - 記録の削除機能
 - 体調傾向の可視化
+
+## デモ
+[こちらからアクセスできます](https://hikaru-taniguchi.github.io/health-tracker-app/)
